@@ -1,6 +1,10 @@
 Omrails::Application.routes.draw do
+  devise_for :users
+
   root :to => 'pages#home'
   get 'about' => 'pages#about'
+  get 'login' => 'pages#login'
+  get 'new_user_registration' => 'pages#new_user_registration'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,8 +1,11 @@
-<h1>Welcome to the Hizhouse!</h1>
-<p>
-	You've found the homepage for the
-	<a href="http://onemonthrails.com">One Month Rails</a> application.
-</p>
-<p>
-	<a href="#">Sign Up Now!</a>
-</p>
+<% if user_signed_in? %>
+   <h1>Welcome Back!</h1>
+<% else %>
+	<h1>Welcome to the Digidex.</h1>
+	<p>
+		Optimize your networking efforts by organizing and staying in touch with your contacts, and getting tips from the pros.
+	</p>
+	<p>
+		 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large" %>
+	</p>
+<% end %>
